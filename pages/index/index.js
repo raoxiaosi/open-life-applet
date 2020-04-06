@@ -1,12 +1,31 @@
-// pages/index/index.js
+import { wxLogin } from '../../apis/login';
+
+const defaultData = {
+  visible: false
+}
+
+const handlers = {
+  login() {
+    this.setData({
+      visible: true
+    })
+  },
+
+  bindGetUserInfo(e) {
+    console.log(e);
+  }
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    ...defaultData,
   },
+
+  ...handlers,
 
   /**
    * 生命周期函数--监听页面加载

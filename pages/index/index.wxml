@@ -1,2 +1,10 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+  <view class="default" bind:tap='login'>Default</view>
+</view>
+
+
+<wux-popup closable visible="{{ visible }}" title="Delete" content="请先登录" bind:close="onClose1" bind:closed="onClosed">
+  <!-- <view  class="popup__button" bindtap="close1">OK</view> -->
+  <button slot="footer" open-type="getUserInfo" lang="zh_CN" type="primary" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确认授权</button>
+</wux-popup>

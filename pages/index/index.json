@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "首页",
-  "usingComponents": {}
+  "usingComponents": {
+    "wux-popup": "/components/wuxComponents/popup/index"
+  }
 }
